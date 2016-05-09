@@ -18,6 +18,7 @@
 		18A856CF1CD3866200F5C1D2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A856CE1CD3866200F5C1D2 /* SecondViewController.swift */; };
 		18A856D11CD391F800F5C1D2 /* help.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 18A856CD1CD3846000F5C1D2 /* help.m4v */; };
 		18A856D21CD391F800F5C1D2 /* vid2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 18A856D01CD38F0100F5C1D2 /* vid2.m4v */; };
+		1FBA44D9B0DD41D12B35B6D7 /* Pods_aiplaytestfinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4903DFAA3363BE31B1697D5 /* Pods_aiplaytestfinal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D8AAFE5E4783D594126A745 /* Pods-aiplaytestfinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiplaytestfinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aiplaytestfinal/Pods-aiplaytestfinal.debug.xcconfig"; sourceTree = "<group>"; };
 		18A856A41CD3832800F5C1D2 /* aiplaytestfinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aiplaytestfinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A856A81CD3832800F5C1D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A856A91CD3832800F5C1D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		18A856CD1CD3846000F5C1D2 /* help.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = help.m4v; sourceTree = "<group>"; };
 		18A856CE1CD3866200F5C1D2 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		18A856D01CD38F0100F5C1D2 /* vid2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid2.m4v; sourceTree = "<group>"; };
+		3B0BBD72F32011110A9D4D33 /* Pods-aiplaytestfinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiplaytestfinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-aiplaytestfinal/Pods-aiplaytestfinal.release.xcconfig"; sourceTree = "<group>"; };
+		E4903DFAA3363BE31B1697D5 /* Pods_aiplaytestfinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aiplaytestfinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			files = (
 				18A856CB1CD3833C00F5C1D2 /* AVFoundation.framework in Frameworks */,
 				18A856CC1CD3833C00F5C1D2 /* AVKit.framework in Frameworks */,
+				1FBA44D9B0DD41D12B35B6D7 /* Pods_aiplaytestfinal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,8 @@
 				18A856A61CD3832800F5C1D2 /* aiplaytestfinal */,
 				18A856BC1CD3832800F5C1D2 /* aiplaytestfinalTests */,
 				18A856A51CD3832800F5C1D2 /* Products */,
+				5B7A2278274E68A5EB2D887E /* Pods */,
+				64164AD246DAD5B1716BAE00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5B7A2278274E68A5EB2D887E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D8AAFE5E4783D594126A745 /* Pods-aiplaytestfinal.debug.xcconfig */,
+				3B0BBD72F32011110A9D4D33 /* Pods-aiplaytestfinal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64164AD246DAD5B1716BAE00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4903DFAA3363BE31B1697D5 /* Pods_aiplaytestfinal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A856C31CD3832900F5C1D2 /* Build configuration list for PBXNativeTarget "aiplaytestfinal" */;
 			buildPhases = (
+				23EE4DF8956A7A70CEBB9C7C /* Check Pods Manifest.lock */,
 				18A856A01CD3832800F5C1D2 /* Sources */,
 				18A856A11CD3832800F5C1D2 /* Frameworks */,
 				18A856A21CD3832800F5C1D2 /* Resources */,
+				FB485F346DC76C065481B75C /* Embed Pods Frameworks */,
+				CA5E8700C00295CCDB6479A4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +253,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23EE4DF8956A7A70CEBB9C7C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA5E8700C00295CCDB6479A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aiplaytestfinal/Pods-aiplaytestfinal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB485F346DC76C065481B75C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aiplaytestfinal/Pods-aiplaytestfinal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18A856A01CD3832800F5C1D2 /* Sources */ = {
@@ -361,6 +436,7 @@
 		};
 		18A856C41CD3832900F5C1D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8AAFE5E4783D594126A745 /* Pods-aiplaytestfinal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = aiplaytestfinal/Info.plist;
@@ -372,6 +448,7 @@
 		};
 		18A856C51CD3832900F5C1D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0BBD72F32011110A9D4D33 /* Pods-aiplaytestfinal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = aiplaytestfinal/Info.plist;

@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import YouTubePlayer
 
 //var secondView = UIViewController()
 
@@ -48,6 +49,11 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var videoDescription: UITextView!
     
+    @IBAction func videoPlay(sender: AnyObject) {
+        if videoPlayer.ready {
+            videoPlayer.play()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,6 @@ class SecondViewController: UIViewController {
         videoDescription.text = videoDescriptionArray[currentScreens]
         
         
-       
         
     }
 

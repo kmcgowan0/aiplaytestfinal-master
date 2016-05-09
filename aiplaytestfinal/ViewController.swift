@@ -8,14 +8,17 @@
 
 import UIKit
 import MediaPlayer
+import YouTubePlayer
 
 
 
 var secondWindow : UIWindow?
 var secondScreenView : UIView?
 var externalLabel = UILabel()
-var videoView = UIWebView()
+var videoPlayer = YouTubePlayerView(frame: UIScreen.screens()[1].bounds)
 var currentScreens = 0
+var loadImage = UIImage()
+var playerEnd = YouTubePlayerState.Ended
 
 
 
@@ -33,17 +36,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        _ = moviePlayer
         
-      
-                
+        loadScreen()
+        
+        
     }
      
     @IBAction func play(sender: AnyObject) {
         setupScreen()
         registerForScreenNotifications()
         currentScreens = 0
-
+        playvideo()
+        
         
     }
     
@@ -51,6 +55,7 @@ class ViewController: UIViewController {
         setupScreen()
         registerForScreenNotifications()
         currentScreens = 1
+        playvideo()
 
     }
     
@@ -58,8 +63,16 @@ class ViewController: UIViewController {
         setupScreen()
         registerForScreenNotifications()
         currentScreens = 2
+        playvideo()
 
     }
+    
+    let youtubeUrl = [
+        "cjkCSl7IAmQ",
+        "sNx57atloH8",
+        "FZUcpVmEHuk"
+        
+    ]
     
     
     let airplay = [
@@ -68,6 +81,49 @@ class ViewController: UIViewController {
         "https://www.youtube.com/embed/FZUcpVmEHuk"
     ]
     
+
+    func loadScreen(){
+        //before a video is selected
+        
+        if UIScreen.screens().count > 1 {
+            //find the second screen (the 'as! UIScreen' is not needed in Xcode 7 and above)
+            let secondScreen = UIScreen.screens()[1]
+            
+            //set up a window for the screen using the screens pixel dimensions
+            secondWindow = UIWindow(frame: secondScreen.bounds)
+            
+            //tell the window which screen to use
+            secondWindow?.screen = secondScreen
+            
+            //set the dimensions for the view for the external screen so it fills the screen
+            secondScreenView = UIView(frame: secondWindow!.frame)
+            
+            //add the view to the second screens window
+            secondWindow?.addSubview(secondScreenView!)
+            
+            //unhide the window
+            secondWindow?.hidden = false
+            //
+            //            //customised the view
+            secondScreenView!.backgroundColor = UIColor.whiteColor()
+            //            //configure the label
+                        externalLabel.textAlignment = NSTextAlignment.Center
+                        externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
+                        externalLabel.frame = secondScreenView!.bounds
+                        externalLabel.text = "LoveLove Films"
+            
+
+            
+            //add the label to the view
+            secondScreenView!.addSubview(externalLabel)
+            
+            
+            
+        } else {
+            //            playVideo()
+        }
+    }
+
     
     func setupScreen(){
         
@@ -100,18 +156,23 @@ class ViewController: UIViewController {
 //            externalLabel.text = airplay[currentScreens]
 
             
-            videoView.frame = secondScreenView!.bounds
+            videoPlayer.frame = secondScreenView!.bounds
             
-            videoView.loadHTMLString("<iframe width=\"720\" height=\"480\" src=\"\(airplay[currentScreens])?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+//            videoView.loadHTMLString("<iframe width=\"720\" height=\"480\" src=\"\(airplay[currentScreens])?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+            videoPlayer.loadVideoID(youtubeUrl[currentScreens])
       
-          
+            
             
 //            playVideo()
             
             //add the label to the view
-            secondScreenView!.addSubview(videoView)
+            secondScreenView!.addSubview(videoPlayer)
+
+            //lovelove logo when its finished
             
-            
+//            if YouTubePlayerState.Ended {
+//                
+//            }
             
         } else {
 //            playVideo()
@@ -124,6 +185,12 @@ class ViewController: UIViewController {
     func registerForScreenNotifications(){
         let notificationCentre = NSNotificationCenter.defaultCenter()
         notificationCentre.addObserver(self, selector: Selector("setupScreen"), name: UIScreenDidConnectNotification, object: nil)
+    }
+    
+    func playvideo() {
+        if videoPlayer.ready {
+            videoPlayer.play()
+        }
     }
     
 //    func playVideo() {

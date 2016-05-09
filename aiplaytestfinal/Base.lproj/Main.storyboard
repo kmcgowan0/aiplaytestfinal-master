@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -100,13 +99,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-eL-f9q">
-                                <rect key="frame" x="15" y="284" width="565" height="296"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="296" id="dre-gG-YpD"/>
-                                </constraints>
-                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRf-Yq-DkH">
+                                <rect key="frame" x="264" y="325" width="72" height="30"/>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <action selector="videoPlay:" destination="dEc-T9-hZc" eventType="touchUpInside" id="KtK-Ea-MRB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,16 +113,12 @@
                             <constraint firstItem="eAD-jz-wwn" firstAttribute="top" secondItem="cQ2-2l-nJh" secondAttribute="bottom" constant="48" id="8Tc-qV-Vzj"/>
                             <constraint firstItem="cQ2-2l-nJh" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="46" id="CIa-ob-Ha4"/>
                             <constraint firstItem="cQ2-2l-nJh" firstAttribute="centerX" secondItem="eAD-jz-wwn" secondAttribute="centerX" id="L3J-cr-6Db"/>
-                            <constraint firstItem="dxW-eL-f9q" firstAttribute="trailing" secondItem="DaY-fy-h2H" secondAttribute="trailingMargin" id="RGm-Tg-hNG"/>
-                            <constraint firstItem="dxW-eL-f9q" firstAttribute="leading" secondItem="DaY-fy-h2H" secondAttribute="leadingMargin" constant="-5" id="RIE-IC-eOV"/>
-                            <constraint firstAttribute="bottom" secondItem="dxW-eL-f9q" secondAttribute="bottom" constant="20" symbolic="YES" id="agN-i2-Ap0"/>
                             <constraint firstAttribute="trailing" secondItem="eAD-jz-wwn" secondAttribute="trailing" constant="68" id="g9O-gk-wYV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="videoDescription" destination="eAD-jz-wwn" id="1z4-xe-eT7"/>
                         <outlet property="videoTitle" destination="cQ2-2l-nJh" id="lmJ-ka-tw3"/>
-                        <outlet property="videoView" destination="dxW-eL-f9q" id="Wph-aM-VJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyP-kf-5pC" userLabel="First Responder" sceneMemberID="firstResponder"/>
