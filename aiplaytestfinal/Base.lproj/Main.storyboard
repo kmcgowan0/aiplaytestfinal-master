@@ -125,14 +125,6 @@
             </objects>
             <point key="canvasLocation" x="1244" y="1450"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="9yl-z0-dNu">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="7iq-F1-7bN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M79-O9-Wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1049" y="1330"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RHW-FY-XMo">
             <objects>

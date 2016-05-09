@@ -62,7 +62,7 @@ class SecondViewController: UIViewController {
         
         videoDescription.text = videoDescriptionArray[currentScreens]
         
-        
+                   
         
     }
 

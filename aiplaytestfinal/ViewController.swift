@@ -25,7 +25,6 @@ var playerEnd = YouTubePlayerState.Ended
 
 
 
-
 class ViewController: UIViewController {
     
     
@@ -38,6 +37,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         loadScreen()
+        
+//        if videoPlayer.stop() {
+//            loadScreen()
+//        }
         
         
     }
@@ -125,6 +128,7 @@ class ViewController: UIViewController {
     }
 
     
+    
     func setupScreen(){
         
         
@@ -169,7 +173,6 @@ class ViewController: UIViewController {
             secondScreenView!.addSubview(videoPlayer)
 
             //lovelove logo when its finished
-            
 //            if YouTubePlayerState.Ended {
 //                
 //            }
