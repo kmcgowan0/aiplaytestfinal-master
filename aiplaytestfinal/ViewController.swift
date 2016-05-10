@@ -174,10 +174,12 @@ class ViewController: UIViewController {
             secondScreenView!.addSubview(videoPlayer)
 
             //lovelove logo when its finished
-//            if YouTubePlayerState.Ended = true{
+            
+
+            //            if YouTubePlayerState.Ended = true{
 //                loadScreen()
 //            }
-//            
+            
         } else {
 //            playVideo()
         }
