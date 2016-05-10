@@ -18,7 +18,7 @@ var externalLabel = UILabel()
 var videoPlayer = YouTubePlayerView(frame: UIScreen.screens()[1].bounds)
 var currentScreens = 0
 var loadImage = UIImage()
-var playerEnd = YouTubePlayerState.Ended
+//var playerEnd = YouTubePlayerState.Ended
 
 
 
@@ -113,7 +113,8 @@ class ViewController: UIViewController {
                         externalLabel.textAlignment = NSTextAlignment.Center
                         externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
                         externalLabel.frame = secondScreenView!.bounds
-                        externalLabel.text = "LoveLove Films"
+                        externalLabel.text = ""
+            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "3182172")!)
             
 
             
@@ -173,10 +174,10 @@ class ViewController: UIViewController {
             secondScreenView!.addSubview(videoPlayer)
 
             //lovelove logo when its finished
-//            if YouTubePlayerState.Ended {
-//                
+//            if YouTubePlayerState.Ended = true{
+//                loadScreen()
 //            }
-            
+//            
         } else {
 //            playVideo()
         }
