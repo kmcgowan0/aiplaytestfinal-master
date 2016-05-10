@@ -62,9 +62,130 @@ class SecondViewController: UIViewController {
         
         videoDescription.text = videoDescriptionArray[currentScreens]
         
-                   
+        func playerStateChanged(playerView: YouTubePlayerView, playerState: YouTubePlayerState) {
+            if playerState == YouTubePlayerState.Ended {
+                //                    loadScreen()
+                print("video ended")
+            }
+        }
+         //???????????????/
         
     }
+    
+//    func setupScreen(){
+//        
+//        
+//        if UIScreen.screens().count > 1 {
+//            //find the second screen (the 'as! UIScreen' is not needed in Xcode 7 and above)
+//            let secondScreen = UIScreen.screens()[1]
+//            
+//            //set up a window for the screen using the screens pixel dimensions
+//            secondWindow = UIWindow(frame: secondScreen.bounds)
+//            
+//            //tell the window which screen to use
+//            secondWindow?.screen = secondScreen
+//            
+//            //set the dimensions for the view for the external screen so it fills the screen
+//            secondScreenView = UIView(frame: secondWindow!.frame)
+//            
+//            //add the view to the second screens window
+//            secondWindow?.addSubview(secondScreenView!)
+//            
+//            //unhide the window
+//            secondWindow?.hidden = false
+//            //
+//            //            //customised the view
+//            secondScreenView!.backgroundColor = UIColor.blackColor()
+//            //            //configure the label
+//            //            externalLabel.textAlignment = NSTextAlignment.Center
+//            //            externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
+//            //            externalLabel.frame = secondScreenView!.bounds
+//            //            externalLabel.text = airplay[currentScreens]
+//            
+//            
+//            videoPlayer.frame = secondScreenView!.bounds
+//            videoPlayer.playerVars = [
+//                "playsinline": "1",
+//                "controls": "1",
+//                "autoplay": "1",
+//                "showinfo": "1",
+//                "autohide":"1",
+//                "modestbranding":"1",
+//                "rel":1]
+//            
+//            //            videoView.loadHTMLString("<iframe width=\"720\" height=\"480\" src=\"\(airplay[currentScreens])?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+////            videoPlayer.loadVideoID(youtubeUrl[currentScreens])
+//            if videoPlayer.ready {
+//                videoPlayer.play()
+//            }
+//            
+//            
+//            
+//            //            playVideo()
+//            
+//            //add the label to the view
+//            secondScreenView!.addSubview(videoPlayer)
+//            
+//            //lovelove logo when its finished
+//            func playerStateChanged(playerView: YouTubePlayerView, playerState: YouTubePlayerState) {
+//                if playerState == YouTubePlayerState.Ended {
+//                    loadScreen()
+//                }
+//            }
+//            
+//            //         if YouTubePlayerState.Ended = true{
+//            //                loadScreen()
+//            //            }
+//            
+//            
+//            
+//        } else {
+//            //            playVideo()
+//        }
+//    }
+//    
+//    func loadScreen(){
+//        //before a video is selected
+//        
+//        if UIScreen.screens().count > 1 {
+//            //find the second screen (the 'as! UIScreen' is not needed in Xcode 7 and above)
+//            let secondScreen = UIScreen.screens()[1]
+//            
+//            //set up a window for the screen using the screens pixel dimensions
+//            secondWindow = UIWindow(frame: secondScreen.bounds)
+//            
+//            //tell the window which screen to use
+//            secondWindow?.screen = secondScreen
+//            
+//            //set the dimensions for the view for the external screen so it fills the screen
+//            secondScreenView = UIView(frame: secondWindow!.frame)
+//            
+//            //add the view to the second screens window
+//            secondWindow?.addSubview(secondScreenView!)
+//            
+//            //unhide the window
+//            secondWindow?.hidden = false
+//            //
+//            //            //customised the view
+//            secondScreenView!.backgroundColor = UIColor.whiteColor()
+//            //            //configure the label
+//            externalLabel.textAlignment = NSTextAlignment.Center
+//            externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
+//            externalLabel.frame = secondScreenView!.bounds
+//            externalLabel.text = ""
+//            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "3182172")!)
+//            
+//            
+//            
+//            //add the label to the view
+//            secondScreenView!.addSubview(externalLabel)
+//            
+//            
+//            
+//        } else {
+//            //            playVideo()
+//        }
+//    }
 
 
     

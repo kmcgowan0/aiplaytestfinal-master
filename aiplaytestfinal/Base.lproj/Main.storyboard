@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-5O-wN5">
-                                <rect key="frame" x="328" y="366" width="240" height="127"/>
-                                <state key="normal" title="play this video">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-5O-wN5">
+                                <rect key="frame" x="282" y="355" width="291" height="148"/>
+                                <state key="normal" title="play this video" image="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,9 +27,9 @@
                                     <segue destination="dEc-T9-hZc" kind="show" id="DiX-P7-CRY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
-                                <rect key="frame" x="51" y="365" width="235" height="128"/>
-                                <state key="normal" title="video">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
+                                <rect key="frame" x="47" y="321" width="192" height="182"/>
+                                <state key="normal" title="video" image="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -37,28 +37,15 @@
                                     <segue destination="dEc-T9-hZc" kind="show" id="MD5-Gq-YM0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
-                                <rect key="frame" x="328" y="191" width="240" height="128"/>
-                                <state key="normal" title="play video">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
+                                <rect key="frame" x="282" y="162" width="253" height="148"/>
+                                <state key="normal" title="play video" image="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1A-rw-C7b"/>
                                     <segue destination="dEc-T9-hZc" kind="show" id="Bbn-vm-g7n"/>
                                 </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="mcC-1C-xrI">
-                                <rect key="frame" x="46" y="365" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jh7-S0-Jzb">
-                                <rect key="frame" x="328" y="191" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="1L8-hB-hHG">
-                                <rect key="frame" x="328" y="365" width="240" height="128"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFE-4M-IPd">
-                                <rect key="frame" x="338" y="375" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -146,10 +133,9 @@
     </scenes>
     <resources>
         <image name="1" width="290" height="148"/>
-        <image name="2" width="354" height="243"/>
         <image name="3" width="199" height="216"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DiX-P7-CRY"/>
+        <segue reference="Bbn-vm-g7n"/>
     </inferredMetricsTieBreakers>
 </document>
