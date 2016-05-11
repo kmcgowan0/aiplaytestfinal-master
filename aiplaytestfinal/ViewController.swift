@@ -27,10 +27,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
-//        loadScreen()
-        
         setupScreen()
     }
      
@@ -47,33 +43,6 @@ class ViewController: UIViewController {
         }
     }
 
-    func loadScreen(){
-        
-        if UIScreen.screens().count > 1 {
-            
-            let secondScreen = UIScreen.screens()[1]
-            
-            secondWindow = UIWindow(frame: secondScreen.bounds)
-            
-            secondWindow?.screen = secondScreen
-            
-            secondScreenView = UIView(frame: secondWindow!.frame)
-            
-            secondWindow?.addSubview(secondScreenView!)
-            
-            secondWindow?.hidden = false
-         
-            secondScreenView!.backgroundColor = UIColor.whiteColor()
-            
-                        externalLabel.textAlignment = NSTextAlignment.Center
-                        externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
-                        externalLabel.frame = secondScreenView!.bounds
-                        externalLabel.text = ""
-            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "3182172")!)
-     
-            secondScreenView!.addSubview(externalLabel)
-        }
-    }
 
     func setupScreen(){
         if UIScreen.screens().count > 1 {
@@ -106,7 +75,7 @@ class ViewController: UIViewController {
             externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
             externalLabel.frame = secondScreenView!.bounds
             externalLabel.text = ""
-            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "3182172")!)
+            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "logoLight")!)
             
          
             secondScreenView!.addSubview(externalLabel)
@@ -131,12 +100,28 @@ class ViewController: UIViewController {
         }
     }
     
-    func logo() {
-        if videoPlayer.ready == false {
-            loadScreen()
+    
+    
+    
+    
+}
+
+extension ViewController {
+    func playerReady(playerView: YouTubePlayerView) {
+        if playerView.ready {
+            
+            print("ready")
+            playerView.play();
         }
     }
-
+    
+    func playerStateChanged(playerView: YouTubePlayerView, playerState: YouTubePlayerState) {
+        if playerState == YouTubePlayerState.Ended {
+            setupScreen()
+        }
+        
+    }
+    
     
 }
 

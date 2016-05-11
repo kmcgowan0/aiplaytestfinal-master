@@ -71,8 +71,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE OF THE VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-2l-nJh">
-                                <rect key="frame" x="219" y="110" width="162" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-jz-wwn">
+                                <rect key="frame" x="68" y="79" width="464" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TITLE OF THE VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-2l-nJh">
+                                <rect key="frame" x="219" y="117" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,24 +91,17 @@
                                     <action selector="videoPlay:" destination="dEc-T9-hZc" eventType="touchUpInside" id="KtK-Ea-MRB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-jz-wwn">
-                                <rect key="frame" x="68" y="72" width="464" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eAD-jz-wwn" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="8" symbolic="YES" id="8qf-A8-zHB"/>
-                            <constraint firstItem="jJH-WX-gmS" firstAttribute="top" secondItem="BRf-Yq-DkH" secondAttribute="bottom" constant="201" id="GJz-6C-yaT"/>
-                            <constraint firstItem="eAD-jz-wwn" firstAttribute="centerX" secondItem="BRf-Yq-DkH" secondAttribute="centerX" id="IQ2-Mf-c22"/>
-                            <constraint firstItem="BRf-Yq-DkH" firstAttribute="centerX" secondItem="DaY-fy-h2H" secondAttribute="centerX" id="Wwv-zZ-oKn"/>
-                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="centerX" secondItem="BRf-Yq-DkH" secondAttribute="centerX" id="Xpt-mP-i6B"/>
-                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="46" id="Zf5-Zq-1bM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="eAD-jz-wwn" secondAttribute="bottom" constant="-72" id="n9b-ao-0Ap"/>
-                            <constraint firstItem="eAD-jz-wwn" firstAttribute="leading" secondItem="DaY-fy-h2H" secondAttribute="leadingMargin" constant="48" id="t4q-aG-zLD"/>
+                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="46" id="0eT-Gf-35S"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eAD-jz-wwn" secondAttribute="bottom" constant="-72" id="B9J-Ri-6ar"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="8" symbolic="YES" id="UX5-Cw-f9o"/>
+                            <constraint firstItem="BRf-Yq-DkH" firstAttribute="centerX" secondItem="cQ2-2l-nJh" secondAttribute="centerX" id="VfO-pa-Odv"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="leading" secondItem="DaY-fy-h2H" secondAttribute="leadingMargin" constant="48" id="ago-kZ-isW"/>
+                            <constraint firstItem="BRf-Yq-DkH" firstAttribute="centerX" secondItem="DaY-fy-h2H" secondAttribute="centerX" id="cBB-em-iXH"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="centerX" secondItem="cQ2-2l-nJh" secondAttribute="centerX" id="cRk-rP-wHT"/>
+                            <constraint firstItem="jJH-WX-gmS" firstAttribute="top" secondItem="BRf-Yq-DkH" secondAttribute="bottom" constant="201" id="eWO-3b-kS7"/>
                         </constraints>
                     </view>
                     <connections>
