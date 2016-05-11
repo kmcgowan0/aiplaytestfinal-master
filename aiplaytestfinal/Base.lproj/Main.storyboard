@@ -31,7 +31,7 @@
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
                                 <rect key="frame" x="47" y="321" width="192" height="182"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="CDA-Vc-KAV"/>
+                                    <constraint firstAttribute="width" constant="192" id="0xq-52-HE4"/>
                                 </constraints>
                                 <state key="normal" title="video" image="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,8 +43,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
                                 <rect key="frame" x="320" y="166" width="253" height="148"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="253" id="JSJ-s6-g8d"/>
-                                    <constraint firstAttribute="height" constant="148" id="wtZ-sB-4ea"/>
+                                    <constraint firstAttribute="width" constant="253" id="0if-eo-liZ"/>
+                                    <constraint firstAttribute="height" constant="148" id="hra-uG-mTc"/>
                                 </constraints>
                                 <state key="normal" title="play video" image="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,18 +63,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="vo9-UR-158" secondAttribute="bottom" constant="41" id="8aB-WI-BIw"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="bottom" secondItem="z8W-u0-fsp" secondAttribute="bottom" id="BbT-Eb-CUM"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="leading" secondItem="z8W-u0-fsp" secondAttribute="trailing" constant="43" id="DLT-1z-BIN"/>
-                            <constraint firstItem="RlZ-R2-NQc" firstAttribute="top" secondItem="z8W-u0-fsp" secondAttribute="bottom" constant="53" id="GcX-mg-w7Z"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="RJ3-AK-i2D" secondAttribute="bottom" constant="30" id="KdF-cq-5pA"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="leading" secondItem="RJ3-AK-i2D" secondAttribute="trailing" constant="33" id="PrZ-n1-8Th"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="centerY" secondItem="RJ3-AK-i2D" secondAttribute="centerY" id="StN-tV-CGE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vo9-UR-158" secondAttribute="trailing" constant="7" id="Z4d-Ot-U8J"/>
-                            <constraint firstItem="RJ3-AK-i2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cRt-Zf-sZj"/>
-                            <constraint firstItem="z8W-u0-fsp" firstAttribute="top" secondItem="o7f-r9-Bim" secondAttribute="bottom" constant="257" id="eCW-Y9-Tpi"/>
-                            <constraint firstItem="z8W-u0-fsp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="gNP-ev-ebP"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="trailing" secondItem="nY0-5O-wN5" secondAttribute="trailing" id="tRH-oO-uRd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vo9-UR-158" secondAttribute="trailing" constant="7" id="AfD-AE-9MJ"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="centerY" secondItem="RJ3-AK-i2D" secondAttribute="centerY" id="FOv-De-AB9"/>
+                            <constraint firstItem="z8W-u0-fsp" firstAttribute="bottom" secondItem="nY0-5O-wN5" secondAttribute="bottom" id="HlH-IE-h4E"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="leading" secondItem="z8W-u0-fsp" secondAttribute="trailing" constant="43" id="I4I-vh-2n1"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="leading" secondItem="RJ3-AK-i2D" secondAttribute="trailing" constant="33" id="Sam-3y-Bqe"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="RJ3-AK-i2D" secondAttribute="bottom" constant="30" id="Ypj-qT-nFU"/>
+                            <constraint firstItem="z8W-u0-fsp" firstAttribute="top" secondItem="o7f-r9-Bim" secondAttribute="bottom" constant="257" id="ZPP-5j-oqw"/>
+                            <constraint firstItem="RlZ-R2-NQc" firstAttribute="top" secondItem="z8W-u0-fsp" secondAttribute="bottom" constant="53" id="dVE-UY-Jj3"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="vo9-UR-158" secondAttribute="bottom" constant="41" id="hlL-bN-hsg"/>
+                            <constraint firstItem="RJ3-AK-i2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iuQ-2E-JTv"/>
+                            <constraint firstItem="z8W-u0-fsp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="yT1-mE-D71"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="trailing" secondItem="nY0-5O-wN5" secondAttribute="trailing" id="zaA-u8-Jqh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
