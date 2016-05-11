@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -16,12 +17,15 @@
                         <viewControllerLayoutGuide type="bottom" id="RlZ-R2-NQc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-5O-wN5">
-                                <rect key="frame" x="282" y="355" width="291" height="148"/>
-                                <state key="normal" title="play this video" image="1">
+                                <rect key="frame" x="399" y="149" width="283" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="byx-fO-G3Q"/>
+                                </constraints>
+                                <state key="normal" title="play this video" image="videoTwo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -29,57 +33,61 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
-                                <rect key="frame" x="47" y="321" width="192" height="182"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="0xq-52-HE4"/>
-                                </constraints>
-                                <state key="normal" title="video" image="3">
+                                <rect key="frame" x="399" y="344" width="283" height="170"/>
+                                <state key="normal" title="video" image="videoThree">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghf-S3-Qwz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
-                                <rect key="frame" x="320" y="166" width="253" height="148"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-AK-i2D">
+                                <rect key="frame" x="87" y="149" width="288" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="253" id="0if-eo-liZ"/>
-                                    <constraint firstAttribute="height" constant="148" id="hra-uG-mTc"/>
+                                    <constraint firstAttribute="height" constant="170" id="XdZ-p4-Z0o"/>
                                 </constraints>
-                                <state key="normal" title="play video" image="3">
+                                <state key="normal" title="Button" image="videoFour"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31s-ZX-GLd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
+                                <rect key="frame" x="92" y="344" width="283" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="tRI-lv-eJI"/>
+                                </constraints>
+                                <state key="normal" title="play video" image="videoOne">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gPb-Jx-KCY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-AK-i2D">
-                                <rect key="frame" x="20" y="155" width="267" height="170"/>
-                                <state key="normal" title="Button" image="videoFour"/>
-                                <connections>
-                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31s-ZX-GLd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="vo9-UR-158" secondAttribute="trailing" constant="7" id="AfD-AE-9MJ"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="centerY" secondItem="RJ3-AK-i2D" secondAttribute="centerY" id="FOv-De-AB9"/>
-                            <constraint firstItem="z8W-u0-fsp" firstAttribute="bottom" secondItem="nY0-5O-wN5" secondAttribute="bottom" id="HlH-IE-h4E"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="leading" secondItem="z8W-u0-fsp" secondAttribute="trailing" constant="43" id="I4I-vh-2n1"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="leading" secondItem="RJ3-AK-i2D" secondAttribute="trailing" constant="33" id="Sam-3y-Bqe"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="RJ3-AK-i2D" secondAttribute="bottom" constant="30" id="Ypj-qT-nFU"/>
-                            <constraint firstItem="z8W-u0-fsp" firstAttribute="top" secondItem="o7f-r9-Bim" secondAttribute="bottom" constant="257" id="ZPP-5j-oqw"/>
-                            <constraint firstItem="RlZ-R2-NQc" firstAttribute="top" secondItem="z8W-u0-fsp" secondAttribute="bottom" constant="53" id="dVE-UY-Jj3"/>
-                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="vo9-UR-158" secondAttribute="bottom" constant="41" id="hlL-bN-hsg"/>
-                            <constraint firstItem="RJ3-AK-i2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iuQ-2E-JTv"/>
-                            <constraint firstItem="z8W-u0-fsp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="yT1-mE-D71"/>
-                            <constraint firstItem="vo9-UR-158" firstAttribute="trailing" secondItem="nY0-5O-wN5" secondAttribute="trailing" id="zaA-u8-Jqh"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="firstBaseline" secondItem="z8W-u0-fsp" secondAttribute="firstBaseline" id="1Oo-JB-TYO"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="4Cn-fy-CSY"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="top" secondItem="RJ3-AK-i2D" secondAttribute="bottom" constant="25" id="6x3-bB-yeK"/>
+                            <constraint firstItem="RJ3-AK-i2D" firstAttribute="top" secondItem="o7f-r9-Bim" secondAttribute="bottom" constant="85" id="802-LD-jne"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="top" secondItem="RJ3-AK-i2D" secondAttribute="top" id="83Z-0e-hBS"/>
+                            <constraint firstItem="RlZ-R2-NQc" firstAttribute="top" secondItem="vo9-UR-158" secondAttribute="bottom" constant="210" id="9aH-Fh-fyr"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="firstBaseline" secondItem="RJ3-AK-i2D" secondAttribute="firstBaseline" id="AVp-Gw-ex9"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="leading" secondItem="z8W-u0-fsp" secondAttribute="leading" id="EnX-2g-RhZ"/>
+                            <constraint firstItem="z8W-u0-fsp" firstAttribute="trailing" secondItem="nY0-5O-wN5" secondAttribute="trailing" id="Kv9-2b-yPH"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="trailing" secondItem="RJ3-AK-i2D" secondAttribute="trailing" id="bCX-79-2EP"/>
+                            <constraint firstItem="z8W-u0-fsp" firstAttribute="baseline" secondItem="vo9-UR-158" secondAttribute="baseline" id="d9c-Qg-RWY"/>
+                            <constraint firstItem="vo9-UR-158" firstAttribute="top" secondItem="z8W-u0-fsp" secondAttribute="top" id="jOw-Pv-Agu"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="baseline" secondItem="RJ3-AK-i2D" secondAttribute="baseline" id="r3W-YM-zOb"/>
+                            <constraint firstItem="RJ3-AK-i2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="v2Q-oq-XEe"/>
+                            <constraint firstItem="nY0-5O-wN5" firstAttribute="leading" secondItem="RJ3-AK-i2D" secondAttribute="trailing" constant="24" id="yLo-Ep-J0t"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CYm-ph-OYC"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <segue destination="dEc-T9-hZc" kind="show" identifier="VideoDetail" id="qk6-fi-xQH"/>
                         <segue destination="4T1-zS-Dtm" kind="show" identifier="NoAirplay" id="cjk-Ha-UJT"/>
@@ -98,7 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QxS-JE-Hys"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FNl-Cm-qU7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF THE VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwg-wN-WVT">
@@ -149,24 +157,24 @@
                         <viewControllerLayoutGuide type="bottom" id="jJH-WX-gmS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DaY-fy-h2H">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-jz-wwn">
-                                <rect key="frame" x="68" y="79" width="464" height="600"/>
+                                <rect key="frame" x="68" y="79" width="888" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TITLE OF THE VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-2l-nJh">
-                                <rect key="frame" x="219" y="117" width="162" height="21"/>
+                                <rect key="frame" x="431" y="117" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRf-Yq-DkH">
-                                <rect key="frame" x="264" y="325" width="72" height="30"/>
+                                <rect key="frame" x="476" y="493" width="72" height="30"/>
                                 <state key="normal" title="Play Video"/>
                                 <connections>
                                     <action selector="videoPlay:" destination="dEc-T9-hZc" eventType="touchUpInside" id="KtK-Ea-MRB"/>
@@ -214,8 +222,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="290" height="148"/>
         <image name="3" width="199" height="216"/>
         <image name="videoFour" width="1358" height="710"/>
+        <image name="videoOne" width="789" height="423"/>
+        <image name="videoThree" width="777" height="401"/>
+        <image name="videoTwo" width="848" height="410"/>
     </resources>
 </document>
