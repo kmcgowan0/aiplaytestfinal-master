@@ -32,13 +32,25 @@ class ViewController: UIViewController {
      
     @IBAction func play(sender: AnyObject) {
         currentScreens = sender.tag!
-        playvideo()
+        
+        if UIScreen.screens().count > 1 {
+            playvideo()
         performSegueWithIdentifier("VideoDetail", sender: videos[sender.tag!])
+        } else {
+            performSegueWithIdentifier("NoAirplay", sender: videos[sender.tag!])
+        }
     }
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      
         if segue.identifier == "VideoDetail" {
             let vc = segue.destinationViewController as! SecondViewController
+            vc.video = sender as! Video
+        }
+        
+        if segue.identifier == "NoAirplay" {
+            let vc = segue.destinationViewController as! NoAirplayView
             vc.video = sender as! Video
         }
     }
