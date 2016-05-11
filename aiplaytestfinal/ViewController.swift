@@ -110,15 +110,21 @@ class ViewController: UIViewController {
         
         videoPlayer.loadVideoID(videos[currentScreens].id)
         if videoPlayer.ready {
+            videoPlayer.playerVars = [
+                "controls": "0",
+                "showinfo": "0"
+            ]
             videoPlayer.play()
+            
         }
+    
     }
     
     
     
 }
 
-extension ViewController {
+extension ViewController  {
     func playerReady(playerView: YouTubePlayerView) {
         if playerView.ready {
             

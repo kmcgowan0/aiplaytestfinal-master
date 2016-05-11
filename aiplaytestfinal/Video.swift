@@ -42,5 +42,11 @@ func buildVideos() -> [Video] {
     videoThree.id = "FZUcpVmEHuk"
     videos.append(videoThree)
     
+    let videoFour = Video()
+    videoFour.title = "Cisco’s Corporate Social Responsibility"
+    videoFour.description = "LoveLove Films was approached by American technology company Cisco, and asked to produce a visually engaging corporate animation that aimed to showcase the crucial work the company does in helping set up networks and connect people in various regions across the globe. The video was to be used to convey a range of key projects that Cisco run throughout the world, including their NetHope disaster relief project that helped aid workers during the recent Ebola crisis in Africa, as well as their NetAcademy scheme which helps provide IT skills development and future job opportunities for those people who live in under-developed countries."
+    videoFour.id = "CuQ7f-tP0uc"
+    videos.append(videoFour)
+    
     return videos
 }
