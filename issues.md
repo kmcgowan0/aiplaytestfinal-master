@@ -4,3 +4,5 @@
 4. MAYBE connect apps
 5. logo on screen ✔️
 6. When airplay is enables while app is already running - no picture just audio
+7. add in more images/videos
+8. style properly (constraints)
