@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,24 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-5O-wN5">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-5O-wN5">
                                 <rect key="frame" x="282" y="355" width="291" height="148"/>
                                 <state key="normal" title="play this video" image="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="video2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DU6-B9-SWp"/>
-                                    <segue destination="dEc-T9-hZc" kind="show" id="DiX-P7-CRY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
-                                <rect key="frame" x="47" y="321" width="192" height="182"/>
-                                <state key="normal" title="video" image="3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="video3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2T-9r-SG6"/>
-                                    <segue destination="dEc-T9-hZc" kind="show" id="MD5-Gq-YM0"/>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BhP-hv-n1z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-UR-158">
@@ -43,8 +33,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1A-rw-C7b"/>
-                                    <segue destination="dEc-T9-hZc" kind="show" id="Bbn-vm-g7n"/>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gPb-Jx-KCY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-u0-fsp">
+                                <rect key="frame" x="47" y="321" width="192" height="182"/>
+                                <state key="normal" title="video" image="3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghf-S3-Qwz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +51,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CYm-ph-OYC"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="dEc-T9-hZc" kind="show" identifier="VideoDetail" id="qk6-fi-xQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,41 +67,41 @@
                         <viewControllerLayoutGuide type="top" id="JKm-ov-Dpu"/>
                         <viewControllerLayoutGuide type="bottom" id="jJH-WX-gmS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DaY-fy-h2H" customClass="SecondViewController">
+                    <view key="view" contentMode="scaleToFill" id="DaY-fy-h2H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-jz-wwn">
-                                <rect key="frame" x="68" y="72" width="464" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="hYg-iT-ggZ"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE OF THE VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-2l-nJh">
                                 <rect key="frame" x="219" y="110" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRf-Yq-DkH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRf-Yq-DkH">
                                 <rect key="frame" x="264" y="325" width="72" height="30"/>
                                 <state key="normal" title="Play Video"/>
                                 <connections>
                                     <action selector="videoPlay:" destination="dEc-T9-hZc" eventType="touchUpInside" id="KtK-Ea-MRB"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-jz-wwn">
+                                <rect key="frame" x="68" y="72" width="464" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eAD-jz-wwn" firstAttribute="leading" secondItem="DaY-fy-h2H" secondAttribute="leading" constant="68" id="0Hr-xU-Qfc"/>
-                            <constraint firstItem="eAD-jz-wwn" firstAttribute="top" secondItem="cQ2-2l-nJh" secondAttribute="bottom" constant="48" id="8Tc-qV-Vzj"/>
-                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="46" id="CIa-ob-Ha4"/>
-                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="centerX" secondItem="eAD-jz-wwn" secondAttribute="centerX" id="L3J-cr-6Db"/>
-                            <constraint firstAttribute="trailing" secondItem="eAD-jz-wwn" secondAttribute="trailing" constant="68" id="g9O-gk-wYV"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="8" symbolic="YES" id="8qf-A8-zHB"/>
+                            <constraint firstItem="jJH-WX-gmS" firstAttribute="top" secondItem="BRf-Yq-DkH" secondAttribute="bottom" constant="201" id="GJz-6C-yaT"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="centerX" secondItem="BRf-Yq-DkH" secondAttribute="centerX" id="IQ2-Mf-c22"/>
+                            <constraint firstItem="BRf-Yq-DkH" firstAttribute="centerX" secondItem="DaY-fy-h2H" secondAttribute="centerX" id="Wwv-zZ-oKn"/>
+                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="centerX" secondItem="BRf-Yq-DkH" secondAttribute="centerX" id="Xpt-mP-i6B"/>
+                            <constraint firstItem="cQ2-2l-nJh" firstAttribute="top" secondItem="JKm-ov-Dpu" secondAttribute="bottom" constant="46" id="Zf5-Zq-1bM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eAD-jz-wwn" secondAttribute="bottom" constant="-72" id="n9b-ao-0Ap"/>
+                            <constraint firstItem="eAD-jz-wwn" firstAttribute="leading" secondItem="DaY-fy-h2H" secondAttribute="leadingMargin" constant="48" id="t4q-aG-zLD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -110,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyP-kf-5pC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244" y="1450"/>
+            <point key="canvasLocation" x="1244" y="1144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RHW-FY-XMo">
@@ -135,7 +136,4 @@
         <image name="1" width="290" height="148"/>
         <image name="3" width="199" height="216"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Bbn-vm-g7n"/>
-    </inferredMetricsTieBreakers>
 </document>

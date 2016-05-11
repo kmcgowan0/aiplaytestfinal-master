@@ -19,6 +19,7 @@
 		18A856D11CD391F800F5C1D2 /* help.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 18A856CD1CD3846000F5C1D2 /* help.m4v */; };
 		18A856D21CD391F800F5C1D2 /* vid2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 18A856D01CD38F0100F5C1D2 /* vid2.m4v */; };
 		1FBA44D9B0DD41D12B35B6D7 /* Pods_aiplaytestfinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4903DFAA3363BE31B1697D5 /* Pods_aiplaytestfinal.framework */; };
+		EB5764861CE322970099C51E /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5764851CE322970099C51E /* Video.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		18A856D01CD38F0100F5C1D2 /* vid2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid2.m4v; sourceTree = "<group>"; };
 		3B0BBD72F32011110A9D4D33 /* Pods-aiplaytestfinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aiplaytestfinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-aiplaytestfinal/Pods-aiplaytestfinal.release.xcconfig"; sourceTree = "<group>"; };
 		E4903DFAA3363BE31B1697D5 /* Pods_aiplaytestfinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aiplaytestfinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5764851CE322970099C51E /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				18A856A91CD3832800F5C1D2 /* AppDelegate.swift */,
 				18A856AB1CD3832800F5C1D2 /* ViewController.swift */,
 				18A856CE1CD3866200F5C1D2 /* SecondViewController.swift */,
+				EB5764851CE322970099C51E /* Video.swift */,
 				18A856AD1CD3832800F5C1D2 /* Main.storyboard */,
 				18A856B01CD3832800F5C1D2 /* Images.xcassets */,
 				18A856B21CD3832800F5C1D2 /* LaunchScreen.xib */,
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A856CF1CD3866200F5C1D2 /* SecondViewController.swift in Sources */,
+				EB5764861CE322970099C51E /* Video.swift in Sources */,
 				18A856AC1CD3832800F5C1D2 /* ViewController.swift in Sources */,
 				18A856AA1CD3832800F5C1D2 /* AppDelegate.swift in Sources */,
 			);
