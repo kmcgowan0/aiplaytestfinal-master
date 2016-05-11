@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         }
     }
 
+  
 
     func setupScreen(){
         if UIScreen.screens().count > 1 {
@@ -82,15 +83,16 @@ class ViewController: UIViewController {
             
             videoPlayer.frame = secondScreenView!.bounds
             
-            //            //configure the label
-            externalLabel.textAlignment = NSTextAlignment.Center
-            externalLabel.font = UIFont(name: "Helvetica", size: 50.0)
-            externalLabel.frame = secondScreenView!.bounds
-            externalLabel.text = ""
-            externalLabel.backgroundColor = UIColor(patternImage: UIImage(named: "logoLight")!)
+            let width = secondScreenView!.bounds.size.width
+            let height = secondScreenView!.bounds.size.height
+        
             
-         
-            secondScreenView!.addSubview(externalLabel)
+            
+            let myImage = UIImage(named: "logoLight.png")
+            let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+            myImageView.image = myImage
+            
+            secondScreenView!.addSubview(myImageView)
             
         }
     }
@@ -111,8 +113,6 @@ class ViewController: UIViewController {
             videoPlayer.play()
         }
     }
-    
-    
     
     
     
