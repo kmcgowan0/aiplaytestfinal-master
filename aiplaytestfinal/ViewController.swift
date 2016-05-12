@@ -27,7 +27,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         setupScreen()
+        videoPlayer.delegate = self
+        
     }
      
     @IBAction func play(sender: AnyObject) {
@@ -128,19 +132,20 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController  {
+extension ViewController: YouTubePlayerDelegate {
+    
     func playerReady(playerView: YouTubePlayerView) {
-        if playerView.ready {
-            
-            print("ready")
-            playerView.play();
-        }
+
     }
     
     func playerStateChanged(playerView: YouTubePlayerView, playerState: YouTubePlayerState) {
         if playerState == YouTubePlayerState.Ended {
             setupScreen()
         }
+        
+    }
+    
+    func playerQualityChanged(videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality) {
         
     }
     
